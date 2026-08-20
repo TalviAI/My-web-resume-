@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'kushi.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
+        default=os.environ.get('postgresql://neondb_owner:npg_fOZvWQLUe6p3@ep-late-queen-acqdp8qm-pooler.sa-east-1.aws.neon.tech/neondb?channel_binding=require&sslmode=require'),
         conn_max_age=600,
         ssl_require=True,
     )
