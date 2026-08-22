@@ -80,7 +80,8 @@ WSGI_APPLICATION = 'kushi.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
+    'default': dj_database_url.parse(
+        'postgresql://neondb_owner:npg_txjaS2M7JFWN@ep-mute-block-awt4n9hv-pooler.c-12.us-east-1.aws.neon.tech/neondb?channel_binding=require&sslmode=require',
         conn_max_age=600,
         ssl_require=True,
     )
